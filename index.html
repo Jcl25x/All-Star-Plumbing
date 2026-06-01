@@ -24,7 +24,6 @@
   .pricing-shadow { box-shadow: rgba(79,70,229,0.15) 0px 0px 0px 2px, rgba(79,70,229,0.08) 0px 8px 32px; }
 </style>
 
-<!-- NAVBAR -->
 <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
@@ -49,7 +48,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero-gradient py-16 lg:py-28">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -62,10 +60,13 @@
           Your Trusted<br/><span class="gradient-text">Plumbing Experts</span><br/>At Your Door
         </h1>
         <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">All Star Plumbing delivers fast, reliable, and affordable plumbing solutions for residential and commercial clients — from drain cleaning to emergency repairs. Quality guaranteed.</p>
-        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
-          <input type="email" placeholder="Enter your email for a free quote" class="flex-1 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"/>
-          <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-colors whitespace-nowrap w-full sm:w-auto">Get Free Quote</button>
-        </div>
+        
+        <form name="hero-quote" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
+          <input type="hidden" name="form-name" value="hero-quote" />
+          <input type="email" name="user-email" placeholder="Enter your email for a free quote" required class="flex-1 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"/>
+          <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-colors whitespace-nowrap w-full sm:w-auto">Get Free Quote</button>
+        </form>
+        
         <p class="text-xs text-gray-400 mt-3">No spam. We'll contact you within 1 business hour.</p>
         <div class="flex items-center gap-6 mt-8 justify-center lg:justify-start">
           <div class="text-center"><div class="text-2xl font-bold text-gray-900">500+</div><div class="text-xs text-gray-500">Happy Clients</div></div>
@@ -119,7 +120,6 @@
   </div>
 </section>
 
-<!-- LOGO STRIP -->
 <section class="bg-white border-y border-gray-100 py-10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <p class="text-center text-sm font-medium text-gray-400 mb-8 uppercase tracking-widest">Trusted by homeowners & businesses across the U.S.</p>
@@ -133,7 +133,6 @@
   </div>
 </section>
 
-<!-- FEATURES / SERVICES -->
 <section id="features" class="bg-gray-50 py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14">
@@ -188,7 +187,6 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section id="how" class="bg-white py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14">
@@ -223,7 +221,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section id="testimonials" class="bg-gray-50 py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14">
@@ -278,7 +275,6 @@
   </div>
 </section>
 
-<!-- PRICING -->
 <section id="pricing" class="bg-white py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14">
@@ -287,7 +283,6 @@
       <p class="text-gray-500 mt-4 max-w-xl mx-auto text-base">No hidden fees. No surprises. Choose the plan that fits your needs and budget.</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start lg:items-stretch">
-      <!-- Free / Basic -->
       <div class="bg-white rounded-2xl p-8 card-shadow border border-gray-100 flex flex-col">
         <div class="mb-6">
           <h3 class="text-lg font-bold text-gray-900 mb-1">Basic</h3>
@@ -304,7 +299,6 @@
         </ul>
         <button class="w-full border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-3 rounded-xl transition-colors text-sm">Book Basic Visit</button>
       </div>
-      <!-- PRO (highlighted) -->
       <div class="rounded-2xl p-8 flex flex-col relative" style="background: linear-gradient(135deg, #4f46e5, #7c3aed); box-shadow: rgba(79,70,229,0.15) 0px 0px 0px 2px, rgba(79,70,229,0.25) 0px 12px 40px;">
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
           <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">⭐ Most Popular</span>
@@ -320,17 +314,15 @@
           <li class="flex items-center gap-2 text-sm text-white"><svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Annual full-home inspection</li>
           <li class="flex items-center gap-2 text-sm text-white"><svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>15% discount on parts</li>
           <li class="flex items-center gap-2 text-sm text-white"><svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>1-year workmanship warranty</li>
-          <li class="flex items-center gap-2 text-sm text-white"><svg class="w-4 h-4 text-yellow-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Dedicated account manager</li>
+          <li class="flex items-center gap-2 text-sm text-indigo-200"><svg class="w-4 h-4 text-indigo-300/50 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Dedicated account manager</li>
         </ul>
-        <button class="w-full bg-white text-indigo-700 hover:bg-yellow-400 hover:text-yellow-900 font-bold py-3 rounded-xl transition-colors text-sm shadow-lg">Start Pro Plan</button>
+        <button class="w-full bg-white hover:bg-indigo-50 text-indigo-600 font-semibold py-3 rounded-xl transition-colors text-sm shadow-lg">Start Pro Plan</button>
       </div>
-      <!-- Enterprise -->
       <div class="bg-white rounded-2xl p-8 card-shadow border border-gray-100 flex flex-col">
         <div class="mb-6">
           <h3 class="text-lg font-bold text-gray-900 mb-1">Enterprise</h3>
           <p class="text-sm text-gray-500 mb-4">For commercial & multi-property clients</p>
           <div class="flex items-end gap-1"><span class="text-4xl font-extrabold text-gray-900">Custom</span></div>
-          <p class="text-xs text-gray-400 mt-1">Contact us for a tailored quote</p>
         </div>
         <ul class="space-y-3 mb-8 flex-1">
           <li class="flex items-center gap-2 text-sm text-gray-600"><svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Everything in Pro Care</li>
@@ -340,81 +332,87 @@
           <li class="flex items-center gap-2 text-sm text-gray-600"><svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>SLA response guarantee</li>
           <li class="flex items-center gap-2 text-sm text-gray-600"><svg class="w-4 h-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Quarterly reporting</li>
         </ul>
-        <button class="w-full border-2 border-gray-200 text-gray-700 hover:bg-gray-900 hover:text-white hover:border-gray-900 font-semibold py-3 rounded-xl transition-colors text-sm">Contact Sales</button>
+        <button class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition-colors text-sm">Contact Sales</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<section id="cta" class="py-20" style="background: linear-gradient(135deg, #3730a3 0%, #4f46e5 40%, #7c3aed 100%);">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-3xl lg:text-5xl font-extrabold text-white mb-4">Ready to Fix Your Plumbing?</h2>
-    <p class="text-indigo-200 text-lg mb-8 max-w-xl mx-auto">Don't wait for a small leak to become a big problem. Call us now or get a free online quote in under 60 seconds.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="tel:+14235999755" class="bg-white text-indigo-700 hover:bg-yellow-400 hover:text-yellow-900 font-bold px-8 py-4 rounded-xl text-base transition-colors shadow-xl w-full sm:w-auto">📞 Call +1 (423) 599-9755</a>
-      <a href="#features" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-700 font-bold px-8 py-4 rounded-xl text-base transition-colors w-full sm:w-auto">View All Services</a>
-    </div>
-    <p class="text-indigo-300 text-sm mt-6">Open Mon–Fri · 9:00 AM – 5:00 PM · Emergency line available 24/7</p>
+<section id="cta" class="bg-gray-900 py-16 lg:py-24 text-center">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl lg:text-5xl font-extrabold text-white tracking-tight">Ready to Fix Your Plumbing?</h2>
+    <p class="text-slate-400 mt-4 text-base lg:text-lg max-w-xl mx-auto">Don't wait for a small leak to become a big problem. Call us now or get a free online quote in under 60 seconds.</p>
+    
+    <form name="quote-requests" method="POST" data-netlify="true" class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <input type="hidden" name="form-name" value="quote-requests" />
+      
+      <a href="tel:+14235999755" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-emerald-900/20 transition-all duration-300 w-full sm:w-auto text-center gap-2">
+        📞 Call +1 (423) 599-9755
+      </a>
+      
+      <button type="submit" class="inline-flex items-center justify-center px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-semibold rounded-xl border border-slate-700 transition-all duration-300 w-full sm:w-auto text-center">
+        Request a Quote via Email
+      </button>
+    </form>
+    
+    <p class="text-xs text-slate-500 mt-6">Open Mon–Fri · 9:00 AM – 5:00 PM · Emergency line available 24/7</p>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-white py-14">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-      <div>
-        <div class="flex items-center gap-2 mb-4">
-          <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center">
-            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-          </div>
-          <span class="text-lg font-bold">All Star Plumbing</span>
+<footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+    <div class="space-y-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 bg-indigo-600 rounded flex items-center justify-center">
+          <svg class="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
         </div>
-        <p class="text-gray-400 text-sm leading-relaxed mb-4">Trusted plumbing services for residential and commercial clients. Quality work, transparent pricing, guaranteed satisfaction.</p>
-        <p class="text-indigo-400 font-semibold text-sm">+1 (423) 599-9755</p>
+        <span class="font-bold text-gray-900">All Star Plumbing</span>
       </div>
-      <div>
-        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Services</h4>
-        <ul class="space-y-2">
-          <li><a href="#features" class="text-gray-400 hover:text-white text-sm transition-colors">Drain Cleaning</a></li>
-          <li><a href="#features" class="text-gray-400 hover:text-white text-sm transition-colors">Water Heater Services</a></li>
-          <li><a href="#features" class="text-gray-400 hover:text-white text-sm transition-colors">Sewer Line Maintenance</a></li>
-          <li><a href="#features" class="text-gray-400 hover:text-white text-sm transition-colors">Emergency Plumbing</a></li>
-          <li><a href="#features" class="text-gray-400 hover:text-white text-sm transition-colors">Commercial Plumbing</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Company</h4>
-        <ul class="space-y-2">
-          <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">About Us</a></li>
-          <li><a href="#testimonials" class="text-gray-400 hover:text-white text-sm transition-colors">Reviews</a></li>
-          <li><a href="#pricing" class="text-gray-400 hover:text-white text-sm transition-colors">Pricing</a></li>
-          <li><a href="#how" class="text-gray-400 hover:text-white text-sm transition-colors">How It Works</a></li>
-          <li><a href="#cta" class="text-gray-400 hover:text-white text-sm transition-colors">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Hours</h4>
-        <ul class="space-y-1.5 text-sm">
-          <li class="flex justify-between"><span class="text-gray-400">Mon – Fri</span><span class="text-white font-medium">9AM – 5PM</span></li>
-          <li class="flex justify-between"><span class="text-gray-400">Saturday</span><span class="text-gray-500">Closed</span></li>
-          <li class="flex justify-between"><span class="text-gray-400">Sunday</span><span class="text-gray-500">Closed</span></li>
-        </ul>
-        <div class="mt-4 bg-indigo-900 border border-indigo-700 rounded-xl p-3">
-          <p class="text-xs text-indigo-300 font-semibold">🚨 Emergency Line</p>
-          <p class="text-white font-bold text-sm mt-1">Available 24/7</p>
-        </div>
-      </div>
+      <p class="text-sm text-gray-500">Trusted plumbing services for residential and commercial clients. Quality work, transparent pricing, guaranteed satisfaction.</p>
+      <div class="text-sm font-semibold text-gray-900">+1 (423) 599-9755</div>
     </div>
-    <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-gray-500 text-xs">© 2026 All Star Plumbing. All rights reserved.</p>
-      <div class="flex gap-4">
-        <a href="#" class="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>
-        <a href="#" class="text-gray-500 hover:text-white text-xs transition-colors">Terms of Service</a>
-        <a href="#" class="text-gray-500 hover:text-white text-xs transition-colors">License #: TN-PLM-2024</a>
-      </div>
+    <div>
+      <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Services</h4>
+      <ul class="space-y-2 text-sm text-gray-600">
+        <li><a href="#features" class="hover:text-indigo-600">Drain Cleaning</a></li>
+        <li><a href="#features" class="hover:text-indigo-600">Water Heater Services</a></li>
+        <li><a href="#features" class="hover:text-indigo-600">Sewer Line Maintenance</a></li>
+        <li><a href="#features" class="hover:text-indigo-600">Emergency Plumbing</a></li>
+        <li><a href="#features" class="hover:text-indigo-600">Commercial Plumbing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Company</h4>
+      <ul class="space-y-2 text-sm text-gray-600">
+        <li><a href="#" class="hover:text-indigo-600">About Us</a></li>
+        <li><a href="#testimonials" class="hover:text-indigo-600">Reviews</a></li>
+        <li><a href="#pricing" class="hover:text-indigo-600">Pricing</a></li>
+        <li><a href="#how" class="hover:text-indigo-600">How It Works</a></li>
+        <li><a href="#cta" class="hover:text-indigo-600">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Hours</h4>
+      <ul class="space-y-2 text-sm text-gray-600">
+        <li class="flex justify-between"><span>Mon – Fri</span><span>9AM – 5PM</span></li>
+        <li class="flex justify-between text-gray-400"><span>Saturday</span><span>Closed</span></li>
+        <li class="flex justify-between text-gray-400"><span>Sunday</span><span>Closed</span></li>
+        <li class="pt-2 text-xs font-bold text-red-500 flex items-center gap-1">
+          <span class="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
+          🚨 Emergency Line Available 24/7
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+    <div>&copy; 2026 All Star Plumbing. All rights reserved.</div>
+    <div class="flex gap-4">
+      <a href="#" class="hover:text-gray-600">Privacy Policy</a>
+      <a href="#" class="hover:text-gray-600">Terms of Service</a>
+      <a href="#" class="hover:text-gray-600">License #: TN-PLM-2024</a>
     </div>
   </div>
 </footer>
+
 </body>
 </html>
